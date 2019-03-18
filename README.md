@@ -7,10 +7,10 @@ Extracting files against a pcap:
 __bro -r example.pcap bro-file-extraction.bro__
 
 Extracting files in real-time:
-1. Add the bro-file-extraction.bro script to a new directory under /opt/bro/share/bro/policy/
+1. Add the bro-file-extraction.bro script to a new directory under __/opt/bro/share/bro/policy/bro-file-extraction__
 2. Add a file called \_\_load\_\_.bro to the same directory with the following content
-@load ./bro-file-extraction.bro
+__@load ./bro-file-extraction.bro__
 
-3. Reference the bro-file-extraction.bro in /opt/bro/share/bro/site/local.bro so that it will load the new scripts in
-/opt/bro/share/bro/policy/custom-scripts, by adding @load bro-file-extraction at the end of the file
+3. Reference the bro-file-extraction.bro in __/opt/bro/share/bro/site/local.bro__ so that it will load the new scripts in
+/opt/bro/share/bro/policy/custom-scripts, by adding __@load bro-file-extraction__ at the end of the file
 4. Restart Bro
