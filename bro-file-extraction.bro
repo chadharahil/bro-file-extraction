@@ -1,10 +1,13 @@
 ##Bro Script to extract all files types to home directory for Bro Version 2.4.1+ (works with Zeek 2.6.1)
 ##Author: Rahil Chadha
 ##Date: 2019-03-18
+##Source: https://github.com/chadharahil/bro-file-extraction
 ##
 ##For anyone else who is frustrated ever since the Bro 2.2+ update with the f$mime_type breaking & the new file_sniff as well as the lack of ##information in official documentation, the code below is my fix; feel free to use. I will try to extend based on protocols HTTP, FTP, email etc. to ##reduce overhead in the future
 ##
 ##Feel free to send suggestions, comments, improvements or ideas at chadharahil@gmail.com
+##
+##Edit Line 115 to change directory path for the file extraction
 
 @load base/files/extract
 
@@ -106,8 +109,9 @@ event file_sniff(f: fa_file, meta: fa_metadata)
 event file_new(f: fa_file)
 	{
 	local fname = cat(f$last_active, "-", f$source, "-", f$id, ".", ext);
-
 	f$info$extracted = fname ;
+	
+	##Edit prefix below to your desired save directory for the exctracted files
 	const prefix = "/home/so/extract_files/" &redef;
 	fname = build_path_compressed(prefix, fname);
 
