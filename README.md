@@ -14,3 +14,5 @@ __@load ./bro-file-extraction.bro__
 3. Reference the bro-file-extraction.bro in __/opt/bro/share/bro/site/local.bro__ so that it will load the new scripts in
 /opt/bro/share/bro/policy/custom-scripts, by adding __@load bro-file-extraction__ at the end of the file
 4. Restart Bro
+
+__PS-> The script is configured to extract files to my home directory, please edit to your desired path__
