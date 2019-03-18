@@ -3,7 +3,7 @@ Extract Files using Bro's Powerful Scripting Engine
 This script can be used both against a pcap or in real-time (configuration needed)
 
 Extracting files against a pcap:
-__bro -r example.pcap bro-file-extraction.bro
+__bro -r example.pcap bro-file-extraction.bro__
 
 Extracting files in real-time:
 1. Add the bro-file-extraction.bro script to a new directory under /opt/bro/share/bro/policy/
