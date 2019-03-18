@@ -5,7 +5,7 @@
 ##
 ##For anyone else who is frustrated ever since the Bro 2.2+ update with the f$mime_type breaking & the new file_sniff as well as the lack of ##information in official documentation, the code below is my fix; feel free to use. I will try to extend based on protocols HTTP, FTP, email etc. to ##reduce overhead in the future
 ##
-##Feel free to send suggestions, comments, improvements or ideas at chadharahil@gmail.com
+##This is my first script so feel free to send suggestions, comments, improvements or ideas at chadharahil@gmail.com
 ##
 ##Edit Line 115 to change directory path for the file extraction
 
